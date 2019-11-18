@@ -5,7 +5,7 @@ $(document).ready(function () {
         data: {
             labels: [],
             datasets: [{
-                label: "Average Request / Second",
+                label: "Requests",
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
                 data: [],
@@ -16,7 +16,7 @@ $(document).ready(function () {
             responsive: true,
             title: {
                 display: true,
-                text: 'Real Time Values of Avg. Request / Second'
+                text: 'Avg. Request / Second (Streaming data)'
             },
             tooltips: {
                 mode: 'index',
@@ -32,8 +32,6 @@ $(document).ready(function () {
                     scaleLabel: {
                         display: true,
                         labelString: 'Time',
-                        // duration: 20000,
-					    // refresh: 1000,
                     }
                 }],
                 yAxes: [{
@@ -60,7 +58,7 @@ $(document).ready(function () {
         data: {
             labels: [],
             datasets: [{
-                label: "Random Dataset",
+                label: "CPU",
                 backgroundColor: 'rgb(50, 99, 212)',
                 borderColor: 'rgb(50, 99, 222)',
                 data: [],
@@ -71,7 +69,7 @@ $(document).ready(function () {
             responsive: true,
             title: {
                 display: true,
-                text: 'Creating Real-Time Charts with Flask'
+                text: '%  CPU Usage per second'
             },
             tooltips: {
                 mode: 'index',
@@ -95,7 +93,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value',
+                        labelString: '% CPU usage / second',
                     },
                     ticks: {
                         suggestedMin: 00,
@@ -117,7 +115,7 @@ $(document).ready(function () {
         data: {
             labels: [],
             datasets: [{
-                label: "Random Dataset",
+                label: "Disk",
                 backgroundColor: 'rgb(25, 199, 132)',
                 borderColor: 'rgb(25, 170, 132)',
                 data: [],
@@ -128,7 +126,7 @@ $(document).ready(function () {
             responsive: true,
             title: {
                 display: true,
-                text: 'Creating Real-Time Charts with Flask'
+                text: '% Disk usage per second'
             },
             tooltips: {
                 mode: 'index',
@@ -152,7 +150,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value',
+                        labelString: '% disk usage',
                     },
                     ticks: {
                         suggestedMin: 00,
@@ -174,7 +172,7 @@ $(document).ready(function () {
         data: {
             labels: [],
             datasets: [{
-                label: "Random Dataset",
+                label: "% of Virtual Memory usage per second",
                 backgroundColor: 'rgb(5, 99, 242)',
                 borderColor: 'rgb(5, 9, 242)',
                 data: [],
@@ -185,7 +183,7 @@ $(document).ready(function () {
             responsive: true,
             title: {
                 display: true,
-                text: 'Creating Real-Time Charts with Flask'
+                text: '% Virtual memory'
             },
             tooltips: {
                 mode: 'index',
@@ -209,7 +207,7 @@ $(document).ready(function () {
                     display: true,
                     scaleLabel: {
                         display: true,
-                        labelString: 'Value',
+                        labelString: '% Vmemory usage / second',
                     },
                     ticks: {
                         suggestedMin: 00,
@@ -264,14 +262,6 @@ $(document).ready(function () {
         config4.data.datasets[0].data.push(data.value4);
         lineChart4.update();
     }
-
-
-
-
-    
-
     // const source = new EventSource("/chart-data");
-
-
 
 });
